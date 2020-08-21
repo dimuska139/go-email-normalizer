@@ -8,6 +8,12 @@ to prevent multiple signups. `go-email-normalizer` contains some popular provide
 [![Go Report Card](https://goreportcard.com/badge/github.com/dimuska139/go-email-normalizer)](https://goreportcard.com/report/github.com/dimuska139/go-email-normalizer)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/dimuska139/go-email-normalizer/blob/master/LICENSE)
 
+### Download
+
+```shell
+go get -u github.com/dimuska139/go-email-normalizer
+```
+
 ## Example
 
 ```go
