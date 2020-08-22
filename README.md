@@ -1,20 +1,20 @@
-# go-email-normalizer
-
-This is Golang library for providing a canonical representation of email address. It allows
-to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easy append others (see an example below).
+# go-email-normalizer - email normalization fo Go
 
 [![Build Status](https://travis-ci.org/dimuska139/go-email-normalizer.svg?branch=master)](https://travis-ci.org/dimuska139/go-email-normalizer)
 [![codecov](https://codecov.io/gh/dimuska139/go-email-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/dimuska139/go-email-normalizer)
 [![Go Report Card](https://goreportcard.com/badge/github.com/dimuska139/go-email-normalizer)](https://goreportcard.com/report/github.com/dimuska139/go-email-normalizer)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/dimuska139/go-email-normalizer/blob/master/LICENSE)
 
-### Download
+This is Golang library for providing a canonical representation of email address. It allows
+to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easy append others.
+
+## Download
 
 ```shell
-go get -u github.com/dimuska139/go-email-normalizer
+go get github.com/dimuska139/go-email-normalizer
 ```
 
-### Example
+## Usage
 
 ```go
 package main
@@ -60,4 +60,4 @@ func main() {
 * Yandex
 * Zoho
 
-Also you can integrate another rules using `AddRule` function (see example above)
+Also you can integrate another rules using `AddRule` function (see an example above)
