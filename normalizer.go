@@ -9,6 +9,7 @@ type Normalizer struct {
 	rules map[string]NormalizingRule
 }
 
+// NewNormalizer : creates Normalizer instance
 func NewNormalizer() *Normalizer {
 	s := map[string]NormalizingRule{
 		"fastmail.com":        &FastmailRule{},
@@ -35,10 +36,12 @@ func NewNormalizer() *Normalizer {
 	return &Normalizer{rules: s}
 }
 
+// AddRule : appends custom normalization rule
 func (n *Normalizer) AddRule(domain string, strategy NormalizingRule) {
 	n.rules[domain] = strategy
 }
 
+// Normalize : converts email to canonical form
 func (n *Normalizer) Normalize(email string) string {
 	prepared := strings.TrimSpace(email)
 	prepared = strings.TrimRight(prepared, ".")
