@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// Rule for Yandex
+// YandexRule
 type YandexRule struct {
 }
 

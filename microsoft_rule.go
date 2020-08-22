@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// Rule for Microsoft
+// MicrosoftRule
 type MicrosoftRule struct {
 }
 

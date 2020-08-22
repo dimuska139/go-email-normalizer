@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// Rule for Zoho
+// ZohoRule
 type ZohoRule struct {
 }
 

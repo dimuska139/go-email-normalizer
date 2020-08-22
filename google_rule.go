@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// Rule for Google
+// GoogleRule
 type GoogleRule struct {
 }
 

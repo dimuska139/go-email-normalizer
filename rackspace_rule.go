@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// Rule for Rackspace
+// RackspaceRule
 type RackspaceRule struct {
 }
 
