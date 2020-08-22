@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// RamblerRule
+// RamblerRule : email normalization rule for Rambler
 type RamblerRule struct {
 }
 

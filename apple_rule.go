@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// AppleRule
+// AppleRule : email normalization rule for Apple
 type AppleRule struct {
 }
 

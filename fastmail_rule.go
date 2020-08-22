@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// FastmailRule
+// FastmailRule : email normalization rule for Fastmail
 type FastmailRule struct {
 }
 

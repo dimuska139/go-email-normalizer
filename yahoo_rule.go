@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// YahooRule
+// YahooRule : email normalization rule for Yahoo
 type YahooRule struct {
 }
 

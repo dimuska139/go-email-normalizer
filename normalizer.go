@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-// Normalizer
+// Normalizer : main library object for normalization emails
 type Normalizer struct {
 	rules map[string]NormalizingRule
 }

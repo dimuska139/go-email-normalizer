@@ -2,7 +2,7 @@ package emailnormalizer
 
 import "strings"
 
-// ProtonmailRule
+// ProtonmailRule : email normalization rule for Protonmail
 type ProtonmailRule struct {
 }
 
