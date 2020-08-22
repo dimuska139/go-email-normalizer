@@ -3,7 +3,6 @@ package emailNormalizer
 import "strings"
 
 type RamblerRule struct {
-
 }
 
 func (rule *RamblerRule) processUsername(username string) string {

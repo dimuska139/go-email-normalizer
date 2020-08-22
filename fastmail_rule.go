@@ -3,7 +3,6 @@ package emailNormalizer
 import "strings"
 
 type FastmailRule struct {
-
 }
 
 func (rule *FastmailRule) processUsername(username string) string {

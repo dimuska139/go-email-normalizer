@@ -31,7 +31,6 @@ func TestNormalizer_UnknownStrategy(t *testing.T) {
 }
 
 type fakeRule struct {
-
 }
 
 func (rule *fakeRule) processUsername(username string) string {

@@ -3,7 +3,6 @@ package emailNormalizer
 import "strings"
 
 type GoogleRule struct {
-
 }
 
 func (rule *GoogleRule) processUsername(username string) string {

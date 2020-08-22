@@ -3,7 +3,6 @@ package emailNormalizer
 import "strings"
 
 type MicrosoftRule struct {
-
 }
 
 func (rule *MicrosoftRule) processUsername(username string) string {
