@@ -1,4 +1,4 @@
-package emailNormalizer
+package email_normalizer
 
 type NormalizingRule interface {
 	processUsername(string) string
