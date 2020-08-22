@@ -22,7 +22,7 @@ package main
 import (
 	"fmt"
 	"strings"
-    normalizer "github.com/dimuska139/go-email-normalizer"
+	normalizer "github.com/dimuska139/go-email-normalizer"
 )
 
 type customRule struct {}
