@@ -1,7 +1,8 @@
-package email_normalizer
+package emailnormalizer
 
 import "strings"
 
+// Rule for Rackspace
 type RackspaceRule struct {
 }
 

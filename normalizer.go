@@ -1,9 +1,10 @@
-package email_normalizer
+package emailnormalizer
 
 import (
 	"strings"
 )
 
+// Normalizer
 type Normalizer struct {
 	rules map[string]NormalizingRule
 }

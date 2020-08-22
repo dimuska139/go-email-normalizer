@@ -1,4 +1,4 @@
-package email_normalizer
+package emailnormalizer
 
 import (
 	"github.com/stretchr/testify/assert"
