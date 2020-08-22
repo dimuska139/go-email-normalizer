@@ -10,21 +10,28 @@ type Normalizer struct {
 
 func NewNormalizer() *Normalizer {
 	s := map[string]NormalizingRule{
-		"fastmail.com": &FastmailRule{},
+		"fastmail.com":        &FastmailRule{},
 		"messagingengine.com": &FastmailRule{},
-		"fastmail.fm": &FastmailRule{},
-		"gmail.com": &GoogleRule{},
-		"googlemail.com": &GoogleRule{},
-		"hotmail.com": &MicrosoftRule{},
-		"live.com": &MicrosoftRule{},
-		"outlook.com": &MicrosoftRule{},
-		"rambler.ru": &RamblerRule{},
-		"lenta.ru": &RamblerRule{},
-		"autorambler.ru": &RamblerRule{},
-		"myrambler.ru": &RamblerRule{},
-		"ro.ru": &RamblerRule{},
+		"fastmail.fm":         &FastmailRule{},
+		"gmail.com":           &GoogleRule{},
+		"googlemail.com":      &GoogleRule{},
+		"google.com":          &GoogleRule{},
+		"hotmail.com":         &MicrosoftRule{},
+		"live.com":            &MicrosoftRule{},
+		"outlook.com":         &MicrosoftRule{},
+		"rambler.ru":          &RamblerRule{},
+		"lenta.ru":            &RamblerRule{},
+		"autorambler.ru":      &RamblerRule{},
+		"myrambler.ru":        &RamblerRule{},
+		"ro.ru":               &RamblerRule{},
+		"icloud.com":          &AppleRule{},
+		"protonmail.ch":       &ProtonmailRule{},
+		"emailsrvr.com":       &RackspaceRule{},
+		"yahoodns.net":        &YahooRule{},
+		"yandex.ru":           &YandexRule{},
+		"zoho.com":            &ZohoRule{},
 	}
-	return &Normalizer{rules:s}
+	return &Normalizer{rules: s}
 }
 
 func (n *Normalizer) AddRule(domain string, strategy NormalizingRule) {

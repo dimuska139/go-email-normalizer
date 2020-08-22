@@ -1,7 +1,7 @@
 # go-email-normalizer
 
 This is Golang library for providing a canonical representation of email address. It allows
-to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easy append others.
+to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easy append others (see an example below).
 
 [![Build Status](https://travis-ci.org/dimuska139/go-email-normalizer.svg?branch=master)](https://travis-ci.org/dimuska139/go-email-normalizer)
 [![codecov](https://codecov.io/gh/dimuska139/go-email-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/dimuska139/go-email-normalizer)
@@ -14,7 +14,7 @@ to prevent multiple signups. `go-email-normalizer` contains some popular provide
 go get -u github.com/dimuska139/go-email-normalizer
 ```
 
-## Example
+### Example
 
 ```go
 package main
@@ -25,32 +25,39 @@ import (
     normalizer "github.com/dimuska139/go-email-normalizer"
 )
 
-type zohoRule struct {}
+type customRule struct {}
 
-func (rule *zohoRule) processUsername(username string) string {
-	return strings.Replace(username, "+", "", -1)
+func (rule *customRule) processUsername(username string) string {
+	return strings.Replace(username, "-", "", -1)
 }
 
-func (rule *zohoRule) processDomain(domain string) string {
+func (rule *customRule) processDomain(domain string) string {
 	return domain
 }
 
-
 func main() {
 	n := normalizer.NewNormalizer()
-	fmt.Println(n.Normalize("test@gm+.ail.com"))
+	fmt.Println(n.Normalize("t.e-St+@gmail.com")) // te-st@gmail.com
+	fmt.Println(n.Normalize("t.e-St+@googlemail.com")) // te-st@gmail.com
+	fmt.Println(n.Normalize("t.e-St+@google.com")) // te-st@gmail.com
 	
-	n.AddRule("zoho.com", &zohoRule{})
-	fmt.Println(n.Normalize("test@zo+ho.com"))
+	n.AddRule("customrules.com", &customRule{})
+	fmt.Println(n.Normalize(" te-s-t@CustomRules.com.")) // test@customrules.com
 }
 ```
 
 
 ## Supported providers
 
-* Google
+* Apple
 * Fastmail
+* Google
 * Microsoft
+* Protonmail
+* Rackspace
 * Rambler
+* Yahoo
+* Yandex
+* Zoho
 
 Also you can integrate another rules using `AddRule` function (see example above)
