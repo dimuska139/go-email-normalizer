@@ -1,4 +1,4 @@
-# go-email-normalizer - email normalization fo Go
+# go-email-normalizer - email normalization for Go
 
 [![Build Status](https://travis-ci.org/dimuska139/go-email-normalizer.svg?branch=master)](https://travis-ci.org/dimuska139/go-email-normalizer)
 [![codecov](https://codecov.io/gh/dimuska139/go-email-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/dimuska139/go-email-normalizer)
