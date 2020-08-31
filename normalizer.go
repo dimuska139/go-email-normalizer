@@ -30,6 +30,8 @@ func NewNormalizer() *Normalizer {
 		"protonmail.ch":       &ProtonmailRule{},
 		"emailsrvr.com":       &RackspaceRule{},
 		"yahoodns.net":        &YahooRule{},
+		"yahoo.com":           &YahooRule{},
+		"ymail.com":           &YahooRule{},
 		"yandex.ru":           &YandexRule{},
 		"zoho.com":            &ZohoRule{},
 	}
