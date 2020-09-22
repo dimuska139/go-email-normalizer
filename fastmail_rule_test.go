@@ -7,11 +7,11 @@ import (
 
 func TestFastmailUsername(t *testing.T) {
 	rule := FastmailRule{}
-	assert.Equal(t, "t.est", rule.processUsername("t+.est"))
+	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
 }
 
 func TestFastmailDomain(t *testing.T) {
 	rule := FastmailRule{}
-	assert.Equal(t, "fastmail.com", rule.processDomain("fastmail.com"))
-	assert.Equal(t, "messagingengine.com", rule.processDomain("messagingengine.com"))
+	assert.Equal(t, "fastmail.com", rule.ProcessDomain("fastmail.com"))
+	assert.Equal(t, "messagingengine.com", rule.ProcessDomain("messagingengine.com"))
 }

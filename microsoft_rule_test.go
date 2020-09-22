@@ -7,11 +7,11 @@ import (
 
 func TestMicrosoftUsername(t *testing.T) {
 	rule := MicrosoftRule{}
-	assert.Equal(t, "t.est", rule.processUsername("t+.est"))
+	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
 }
 
 func TestMicrosoftDomain(t *testing.T) {
 	rule := MicrosoftRule{}
-	assert.Equal(t, "microsoft.com", rule.processDomain("microsoft.com"))
-	assert.Equal(t, "live.com", rule.processDomain("live.com"))
+	assert.Equal(t, "microsoft.com", rule.ProcessDomain("microsoft.com"))
+	assert.Equal(t, "live.com", rule.ProcessDomain("live.com"))
 }

@@ -7,11 +7,11 @@ import (
 
 func TestGoogleUsername(t *testing.T) {
 	rule := GoogleRule{}
-	assert.Equal(t, "t", rule.processUsername("t+.est"))
+	assert.Equal(t, "t", rule.ProcessUsername("t+.est"))
 }
 
 func TestGoogleDomain(t *testing.T) {
 	rule := GoogleRule{}
-	assert.Equal(t, "gmail.com", rule.processDomain("googlemail.com"))
-	assert.Equal(t, "gmail.com", rule.processDomain("gmail.com"))
+	assert.Equal(t, "gmail.com", rule.ProcessDomain("googlemail.com"))
+	assert.Equal(t, "gmail.com", rule.ProcessDomain("gmail.com"))
 }

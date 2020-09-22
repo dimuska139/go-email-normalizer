@@ -27,11 +27,11 @@ import (
 
 type customRule struct {}
 
-func (rule *customRule) processUsername(username string) string {
+func (rule *customRule) ProcessUsername(username string) string {
 	return strings.Replace(username, "-", "", -1)
 }
 
-func (rule *customRule) processDomain(domain string) string {
+func (rule *customRule) ProcessDomain(domain string) string {
 	return domain
 }
 

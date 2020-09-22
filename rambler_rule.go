@@ -6,10 +6,10 @@ import "strings"
 type RamblerRule struct {
 }
 
-func (rule *RamblerRule) processUsername(username string) string {
+func (rule *RamblerRule) ProcessUsername(username string) string {
 	return strings.Replace(username, "+", "", -1)
 }
 
-func (rule *RamblerRule) processDomain(domain string) string {
+func (rule *RamblerRule) ProcessDomain(domain string) string {
 	return domain
 }

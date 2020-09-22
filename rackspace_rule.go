@@ -6,10 +6,10 @@ import "strings"
 type RackspaceRule struct {
 }
 
-func (rule *RackspaceRule) processUsername(username string) string {
+func (rule *RackspaceRule) ProcessUsername(username string) string {
 	return strings.Replace(username, "+", "", -1)
 }
 
-func (rule *RackspaceRule) processDomain(domain string) string {
+func (rule *RackspaceRule) ProcessDomain(domain string) string {
 	return domain
 }

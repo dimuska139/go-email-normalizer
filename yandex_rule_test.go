@@ -7,10 +7,10 @@ import (
 
 func TestYandexUsername(t *testing.T) {
 	rule := YandexRule{}
-	assert.Equal(t, "t.est", rule.processUsername("t+.est"))
+	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
 }
 
 func TestYandexDomain(t *testing.T) {
 	rule := YandexRule{}
-	assert.Equal(t, "yandex.ru", rule.processDomain("yandex.ru"))
+	assert.Equal(t, "yandex.ru", rule.ProcessDomain("yandex.ru"))
 }

@@ -33,11 +33,11 @@ func TestNormalizer_UnknownStrategy(t *testing.T) {
 type fakeRule struct {
 }
 
-func (rule *fakeRule) processUsername(username string) string {
+func (rule *fakeRule) ProcessUsername(username string) string {
 	return "test"
 }
 
-func (rule *fakeRule) processDomain(domain string) string {
+func (rule *fakeRule) ProcessDomain(domain string) string {
 	return "email.com"
 }
 

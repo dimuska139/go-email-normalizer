@@ -6,7 +6,7 @@ import "strings"
 type GoogleRule struct {
 }
 
-func (rule *GoogleRule) processUsername(username string) string {
+func (rule *GoogleRule) ProcessUsername(username string) string {
 	result := strings.Replace(username, ".", "", -1)
 
 	plusSignIndex := strings.Index(result, "+")
@@ -17,6 +17,6 @@ func (rule *GoogleRule) processUsername(username string) string {
 	return result
 }
 
-func (rule *GoogleRule) processDomain(domain string) string {
+func (rule *GoogleRule) ProcessDomain(domain string) string {
 	return "gmail.com" // googlemail.com/gmail.com => gmail.com
 }

@@ -7,10 +7,10 @@ import (
 
 func TestProtonmailUsername(t *testing.T) {
 	rule := ProtonmailRule{}
-	assert.Equal(t, "t.est", rule.processUsername("t+.est"))
+	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
 }
 
 func TestProtonmailDomain(t *testing.T) {
 	rule := ProtonmailRule{}
-	assert.Equal(t, "protonmail.ch", rule.processDomain("protonmail.ch"))
+	assert.Equal(t, "protonmail.ch", rule.ProcessDomain("protonmail.ch"))
 }

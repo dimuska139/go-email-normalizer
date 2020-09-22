@@ -6,10 +6,10 @@ import "strings"
 type FastmailRule struct {
 }
 
-func (rule *FastmailRule) processUsername(username string) string {
+func (rule *FastmailRule) ProcessUsername(username string) string {
 	return strings.Replace(username, "+", "", -1)
 }
 
-func (rule *FastmailRule) processDomain(domain string) string {
+func (rule *FastmailRule) ProcessDomain(domain string) string {
 	return domain
 }

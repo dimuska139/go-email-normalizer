@@ -6,10 +6,10 @@ import "strings"
 type ZohoRule struct {
 }
 
-func (rule *ZohoRule) processUsername(username string) string {
+func (rule *ZohoRule) ProcessUsername(username string) string {
 	return strings.Replace(username, "+", "", -1)
 }
 
-func (rule *ZohoRule) processDomain(domain string) string {
+func (rule *ZohoRule) ProcessDomain(domain string) string {
 	return domain
 }

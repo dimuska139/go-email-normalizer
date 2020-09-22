@@ -7,10 +7,10 @@ import (
 
 func TestRackspaceUsername(t *testing.T) {
 	rule := RackspaceRule{}
-	assert.Equal(t, "t.est", rule.processUsername("t+.est"))
+	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
 }
 
 func TestRackspaceDomain(t *testing.T) {
 	rule := RackspaceRule{}
-	assert.Equal(t, "emailsrvr.com", rule.processDomain("emailsrvr.com"))
+	assert.Equal(t, "emailsrvr.com", rule.ProcessDomain("emailsrvr.com"))
 }

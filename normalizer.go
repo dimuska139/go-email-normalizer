@@ -59,7 +59,7 @@ func (n *Normalizer) Normalize(email string) string {
 	domain := parts[1]
 
 	if rule, ok := n.rules[domain]; ok {
-		return rule.processUsername(username) + "@" + rule.processDomain(domain)
+		return rule.ProcessUsername(username) + "@" + rule.ProcessDomain(domain)
 	}
 
 	return prepared
