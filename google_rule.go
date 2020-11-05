@@ -7,7 +7,8 @@ type GoogleRule struct {
 }
 
 func (rule *GoogleRule) ProcessUsername(username string) string {
-	result := strings.Replace(username, ".", "", -1)
+	result := strings.ToLower(username)
+	result = strings.Replace(result, ".", "", -1)
 
 	plusSignIndex := strings.Index(result, "+")
 	if plusSignIndex != -1 {

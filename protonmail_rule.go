@@ -7,7 +7,8 @@ type ProtonmailRule struct {
 }
 
 func (rule *ProtonmailRule) ProcessUsername(username string) string {
-	return strings.Replace(username, "+", "", -1)
+	result := strings.ToLower(username)
+	return strings.Replace(result, "+", "", -1)
 }
 
 func (rule *ProtonmailRule) ProcessDomain(domain string) string {

@@ -22,12 +22,12 @@ func TestNormalizer_NormalizeLower(t *testing.T) {
 
 func TestNormalizer_InvalidEmail(t *testing.T) {
 	normalizer := NewNormalizer()
-	assert.Equal(t, "emailgmail.com", normalizer.Normalize("emAilgmail.cOm."))
+	assert.Equal(t, "emAilgmail.cOm", normalizer.Normalize("emAilgmail.cOm."))
 }
 
 func TestNormalizer_UnknownStrategy(t *testing.T) {
 	normalizer := NewNormalizer()
-	assert.Equal(t, "email@test.com", normalizer.Normalize(" emAil@tEsT.cOm. "))
+	assert.Equal(t, "emAil@test.com", normalizer.Normalize(" emAil@tEsT.cOm. "))
 }
 
 type fakeRule struct {

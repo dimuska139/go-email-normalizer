@@ -7,7 +7,8 @@ type YahooRule struct {
 }
 
 func (rule *YahooRule) ProcessUsername(username string) string {
-	result := strings.Replace(username, ".", "", -1)
+	result := strings.ToLower(username)
+	result = strings.Replace(result, ".", "", -1)
 	return strings.Replace(result, "-", "", -1)
 }
 
