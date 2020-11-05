@@ -7,7 +7,8 @@ type RackspaceRule struct {
 }
 
 func (rule *RackspaceRule) ProcessUsername(username string) string {
-	return strings.Replace(username, "+", "", -1)
+	result := strings.ToLower(username)
+	return strings.Replace(result, "+", "", -1)
 }
 
 func (rule *RackspaceRule) ProcessDomain(domain string) string {

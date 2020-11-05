@@ -47,20 +47,18 @@ func (n *Normalizer) AddRule(domain string, strategy NormalizingRule) {
 func (n *Normalizer) Normalize(email string) string {
 	prepared := strings.TrimSpace(email)
 	prepared = strings.TrimRight(prepared, ".")
-	prepared = strings.ToLower(prepared)
 
 	parts := strings.Split(prepared, "@")
-
 	if len(parts) != 2 {
 		return prepared
 	}
 
-	username := parts[0]
-	domain := parts[1]
+	username := parts[0] // The first part of the address may be case sensitive (RFC 5336)
+	domain := strings.ToLower(parts[1]) // Domain names are case-insensitive (RFC 4343)
 
 	if rule, ok := n.rules[domain]; ok {
 		return rule.ProcessUsername(username) + "@" + rule.ProcessDomain(domain)
 	}
 
-	return prepared
+	return username+ "@" +domain
 }

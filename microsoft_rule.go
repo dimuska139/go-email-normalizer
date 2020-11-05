@@ -7,7 +7,8 @@ type MicrosoftRule struct {
 }
 
 func (rule *MicrosoftRule) ProcessUsername(username string) string {
-	return strings.Replace(username, "+", "", -1)
+	result := strings.ToLower(username)
+	return strings.Replace(result, "+", "", -1)
 }
 
 func (rule *MicrosoftRule) ProcessDomain(domain string) string {
