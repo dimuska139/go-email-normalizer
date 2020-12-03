@@ -7,7 +7,7 @@
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  
 
 This is Golang library for providing a canonical representation of email address. It allows
-to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easy append others.
+to prevent multiple signups. `go-email-normalizer` contains some popular providers but you can easily append others.
 
 ## Download
 
