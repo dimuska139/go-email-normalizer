@@ -44,7 +44,7 @@ func main() {
 	fmt.Println(n.Normalize("t.e-St+@google.com")) // te-st@gmail.com
 	
 	n.AddRule("customrules.com", &customRule{})
-	fmt.Println(n.Normalize(" te-s-t@CustomRules.com.")) // test@customrules.com
+	fmt.Println(n.Normalize(" tE-S-t@CustomRules.com.")) // tESt@customrules.com
 }
 ```
 
