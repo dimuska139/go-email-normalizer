@@ -8,9 +8,10 @@ type YandexRule struct {
 
 func (rule *YandexRule) ProcessUsername(username string) string {
 	result := strings.ToLower(username)
-	return strings.Replace(result, "+", "", -1)
+	result = strings.Replace(result, "+", "", -1)
+	return strings.Replace(result, "-", ".", -1)
 }
 
 func (rule *YandexRule) ProcessDomain(domain string) string {
-	return domain
+	return "yandex.ru"
 }

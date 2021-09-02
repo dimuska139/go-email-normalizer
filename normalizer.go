@@ -33,6 +33,12 @@ func NewNormalizer() *Normalizer {
 		"yahoo.com":           &YahooRule{},
 		"ymail.com":           &YahooRule{},
 		"yandex.ru":           &YandexRule{},
+		"ya.ru":               &YandexRule{},
+		"narod.ru":            &YandexRule{},
+		"yandex.com":          &YandexRule{},
+		"yandex.kz":           &YandexRule{},
+		"yandex.ua":           &YandexRule{},
+		"yandex.by":           &YandexRule{},
 		"zoho.com":            &ZohoRule{},
 	}
 	return &Normalizer{rules: s}
@@ -53,12 +59,12 @@ func (n *Normalizer) Normalize(email string) string {
 		return prepared
 	}
 
-	username := parts[0] // The first part of the address may be case sensitive (RFC 5336)
+	username := parts[0]                // The first part of the address may be case sensitive (RFC 5336)
 	domain := strings.ToLower(parts[1]) // Domain names are case-insensitive (RFC 4343)
 
 	if rule, ok := n.rules[domain]; ok {
 		return rule.ProcessUsername(username) + "@" + rule.ProcessDomain(domain)
 	}
 
-	return username+ "@" +domain
+	return username + "@" + domain
 }
