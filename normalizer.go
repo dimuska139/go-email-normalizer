@@ -33,6 +33,12 @@ func NewNormalizer() *Normalizer {
 		"yahoo.com":           &YahooRule{},
 		"ymail.com":           &YahooRule{},
 		"yandex.ru":           &YandexRule{},
+		"ya.ru":               &YandexRule{},
+		"narod.ru":            &YandexRule{},
+		"yandex.com":          &YandexRule{},
+		"yandex.kz":           &YandexRule{},
+		"yandex.ua":           &YandexRule{},
+		"yandex.by":           &YandexRule{},
 		"zoho.com":            &ZohoRule{},
 	}
 	return &Normalizer{rules: s}
@@ -60,5 +66,5 @@ func (n *Normalizer) Normalize(email string) string {
 		return rule.ProcessUsername(username) + "@" + rule.ProcessDomain(domain)
 	}
 
-	return username+ "@" +domain
+	return username + "@" + domain
 }
