@@ -27,6 +27,7 @@ func NewNormalizer() *Normalizer {
 		"myrambler.ru":        &RamblerRule{},
 		"ro.ru":               &RamblerRule{},
 		"icloud.com":          &AppleRule{},
+		"me.com":              &AppleRule{},
 		"protonmail.ch":       &ProtonmailRule{},
 		"emailsrvr.com":       &RackspaceRule{},
 		"yahoodns.net":        &YahooRule{},
@@ -59,7 +60,7 @@ func (n *Normalizer) Normalize(email string) string {
 		return prepared
 	}
 
-	username := parts[0] // The first part of the address may be case sensitive (RFC 5336)
+	username := parts[0]                // The first part of the address may be case sensitive (RFC 5336)
 	domain := strings.ToLower(parts[1]) // Domain names are case-insensitive (RFC 4343)
 
 	if rule, ok := n.rules[domain]; ok {

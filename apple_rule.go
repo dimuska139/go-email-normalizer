@@ -12,5 +12,5 @@ func (rule *AppleRule) ProcessUsername(username string) string {
 }
 
 func (rule *AppleRule) ProcessDomain(domain string) string {
-	return domain
+	return "icloud.com"
 }

@@ -13,4 +13,5 @@ func TestAppleUsername(t *testing.T) {
 func TestAppleDomain(t *testing.T) {
 	rule := AppleRule{}
 	assert.Equal(t, "icloud.com", rule.ProcessDomain("icloud.com"))
+	assert.Equal(t, "icloud.com", rule.ProcessDomain("me.com"))
 }
