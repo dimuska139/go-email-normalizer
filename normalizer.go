@@ -11,38 +11,45 @@ type Normalizer struct {
 
 // NewNormalizer : creates Normalizer instance
 func NewNormalizer() *Normalizer {
-	s := map[string]NormalizingRule{
-		"fastmail.com":        &FastmailRule{},
-		"messagingengine.com": &FastmailRule{},
-		"fastmail.fm":         &FastmailRule{},
-		"gmail.com":           &GoogleRule{},
-		"googlemail.com":      &GoogleRule{},
-		"google.com":          &GoogleRule{},
-		"hotmail.com":         &MicrosoftRule{},
-		"live.com":            &MicrosoftRule{},
-		"outlook.com":         &MicrosoftRule{},
-		"rambler.ru":          &RamblerRule{},
-		"lenta.ru":            &RamblerRule{},
-		"autorambler.ru":      &RamblerRule{},
-		"myrambler.ru":        &RamblerRule{},
-		"ro.ru":               &RamblerRule{},
-		"icloud.com":          &AppleRule{},
-		"me.com":              &AppleRule{},
-		"protonmail.ch":       &ProtonmailRule{},
-		"emailsrvr.com":       &RackspaceRule{},
-		"yahoodns.net":        &YahooRule{},
-		"yahoo.com":           &YahooRule{},
-		"ymail.com":           &YahooRule{},
-		"yandex.ru":           &YandexRule{},
-		"ya.ru":               &YandexRule{},
-		"narod.ru":            &YandexRule{},
-		"yandex.com":          &YandexRule{},
-		"yandex.kz":           &YandexRule{},
-		"yandex.ua":           &YandexRule{},
-		"yandex.by":           &YandexRule{},
-		"zoho.com":            &ZohoRule{},
+	rules := make(map[string]NormalizingRule)
+
+	microsoftRule := &MicrosoftRule{}
+	for _, domain := range microsoftDomains {
+		rules[domain] = microsoftRule
 	}
-	return &Normalizer{rules: s}
+
+	yahooRule := &YahooRule{}
+	for _, domain := range yahooDomains {
+		rules[domain] = yahooRule
+	}
+
+	googleRule := &GoogleRule{}
+	for _, domain := range googleDomains {
+		rules[domain] = googleRule
+	}
+
+	fastmailRule := &FastmailRule{}
+	for _, domain := range fastmailDomains {
+		rules[domain] = fastmailRule
+	}
+
+	ramblerRule := &RamblerRule{}
+	for _, domain := range ramblerDomains {
+		rules[domain] = ramblerRule
+	}
+
+	yandexRule := &YandexRule{}
+	for _, domain := range yandexDomains {
+		rules[domain] = yandexRule
+	}
+
+	appleRule := &AppleRule{}
+	rules["icloud.com"] = appleRule
+	rules["me.com"] = appleRule
+	rules["protonmail.ch"] = &ProtonmailRule{}
+	rules["emailsrvr.com"] = &RackspaceRule{}
+	rules["zoho.com"] = &ZohoRule{}
+	return &Normalizer{rules: rules}
 }
 
 // AddRule : appends custom normalization rule
