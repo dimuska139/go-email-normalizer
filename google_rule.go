@@ -19,5 +19,10 @@ func (rule *GoogleRule) ProcessUsername(username string) string {
 }
 
 func (rule *GoogleRule) ProcessDomain(domain string) string {
-	return "gmail.com" // googlemail.com/gmail.com => gmail.com
+	switch domain {
+	case "google.com":
+		return domain
+	default:
+		return "gmail.com" // googlemail.com/gmail.com => gmail.com
+	}
 }
