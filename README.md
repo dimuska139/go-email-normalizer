@@ -12,7 +12,7 @@ to prevent multiple signups. `go-email-normalizer` contains some popular provide
 ## Download
 
 ```shell
-go get github.com/dimuska139/go-email-normalizer
+go get github.com/dimuska139/go-email-normalizer/v2
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ package main
 import (
 	"fmt"
 	"strings"
-	normalizer "github.com/dimuska139/go-email-normalizer"
+	normalizer "github.com/dimuska139/go-email-normalizer/v2"
 )
 
 type customRule struct {}
@@ -40,8 +40,9 @@ func main() {
 	n := normalizer.NewNormalizer()
 	fmt.Println(n.Normalize("vasya+pupkin@gmail.com")) // vasya@gmail.com
 	fmt.Println(n.Normalize("t.e-St+vasya@gmail.com")) // te-st@gmail.com
+	fmt.Println(n.Normalize("t+.-est@yahoo.com"))      // t+.est@yahoo.com
 	fmt.Println(n.Normalize("t.e-St+@googlemail.com")) // te-st@gmail.com
-	fmt.Println(n.Normalize("t.e-St+@google.com")) // te-st@gmail.com
+	fmt.Println(n.Normalize("t.e-St+@google.com"))     // te-st@gmail.com
 	
 	n.AddRule("customrules.com", &customRule{})
 	fmt.Println(n.Normalize(" tE-S-t@CustomRules.com.")) // tESt@customrules.com
@@ -62,4 +63,4 @@ func main() {
 * Yandex
 * Zoho
 
-Also you can integrate another rules using `AddRule` function (see an example above)
+Also you can integrate other rules using `AddRule` function (see an example above)
