@@ -200,3 +200,10 @@ var yandexDomains = []string{
 	"yandex.asia",
 	"yandex.mobi",
 }
+
+var protonmailDomains = []string{
+	"protonmail.ch",
+	"protonmail.com",
+	"proton.me",
+	"pm.me",
+}
