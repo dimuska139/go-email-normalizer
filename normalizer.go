@@ -43,10 +43,14 @@ func NewNormalizer() *Normalizer {
 		rules[domain] = yandexRule
 	}
 
+	protonmailRule := &ProtonmailRule{}
+	for _, domain := range protonmailDomains {
+		rules[domain] = protonmailRule
+	}
+
 	appleRule := &AppleRule{}
 	rules["icloud.com"] = appleRule
 	rules["me.com"] = appleRule
-	rules["protonmail.ch"] = &ProtonmailRule{}
 	rules["emailsrvr.com"] = &RackspaceRule{}
 	rules["zoho.com"] = &ZohoRule{}
 	return &Normalizer{rules: rules}

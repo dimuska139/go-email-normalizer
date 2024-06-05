@@ -8,7 +8,14 @@ type ProtonmailRule struct {
 
 func (rule *ProtonmailRule) ProcessUsername(username string) string {
 	result := strings.ToLower(username)
-	return strings.Replace(result, "+", "", -1)
+	result = strings.Replace(result, ".", "", -1)
+
+	plusSignIndex := strings.Index(result, "+")
+	if plusSignIndex != -1 {
+		result = result[0:plusSignIndex]
+	}
+
+	return result
 }
 
 func (rule *ProtonmailRule) ProcessDomain(domain string) string {
