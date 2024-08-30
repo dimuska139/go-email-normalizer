@@ -6,6 +6,12 @@ var fastmailDomains = []string{
 	"fastmail.fm",
 }
 
+var appleDomains = []string{
+	"icloud.com",
+	"me.com",
+	"mac.com",
+}
+
 var yahooDomains = []string{
 	"yahoo.com.ar",
 	"yahoo.com.au",
