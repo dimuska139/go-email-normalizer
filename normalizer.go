@@ -49,8 +49,10 @@ func NewNormalizer() *Normalizer {
 	}
 
 	appleRule := &AppleRule{}
-	rules["icloud.com"] = appleRule
-	rules["me.com"] = appleRule
+	for _, domain := range appleDomains {
+		rules[domain] = appleRule
+	}
+
 	rules["emailsrvr.com"] = &RackspaceRule{}
 	rules["zoho.com"] = &ZohoRule{}
 	return &Normalizer{rules: rules}
