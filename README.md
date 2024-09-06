@@ -12,7 +12,7 @@ to prevent multiple signups. `go-email-normalizer` contains some popular provide
 ## Download
 
 ```shell
-go get -u github.com/dimuska139/go-email-normalizer/v2
+go get -u github.com/dimuska139/go-email-normalizer/v3
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ package main
 import (
 	"fmt"
 	"strings"
-	normalizer "github.com/dimuska139/go-email-normalizer/v2"
+	normalizer "github.com/dimuska139/go-email-normalizer/v3"
 )
 
 type customRule struct {}
