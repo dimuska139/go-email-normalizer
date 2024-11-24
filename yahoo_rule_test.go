@@ -8,6 +8,7 @@ import (
 func TestYahooUsername(t *testing.T) {
 	rule := YahooRule{}
 	assert.Equal(t, "johnbrown", rule.ProcessUsername("JohnBrown"))
+	assert.Equal(t, "john+brown", rule.ProcessUsername("John+Brown"))
 }
 
 func TestYahooDomain(t *testing.T) {

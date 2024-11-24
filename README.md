@@ -23,7 +23,7 @@ package main
 import (
 	"fmt"
 	"strings"
-	normalizer "github.com/dimuska139/go-email-normalizer/v3"
+	normalizer "github.com/dimuska139/go-email-normalizer/v4"
 )
 
 type customRule struct {}
@@ -40,7 +40,7 @@ func main() {
 	n := normalizer.NewNormalizer()
 	fmt.Println(n.Normalize("vasya+pupkin@gmail.com")) // vasya@gmail.com
 	fmt.Println(n.Normalize("t.e-St+vasya@gmail.com")) // te-st@gmail.com
-	fmt.Println(n.Normalize("t+.-est@yahoo.com"))      // t+.est@yahoo.com
+	fmt.Println(n.Normalize("John+Brown@yahoo.com"))   // john+brown@yahoo.com
 	fmt.Println(n.Normalize("t.e-St+@googlemail.com")) // te-st@gmail.com
 	fmt.Println(n.Normalize("t.e-St+@google.com"))     // te-st@gmail.com
 	
