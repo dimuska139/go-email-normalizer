@@ -41,6 +41,7 @@ func main() {
 	fmt.Println(n.Normalize("vasya+pupkin@gmail.com")) // vasya@gmail.com
 	fmt.Println(n.Normalize("t.e-St+vasya@gmail.com")) // te-st@gmail.com
 	fmt.Println(n.Normalize("John+Brown@yahoo.com"))   // john+brown@yahoo.com
+	fmt.Println(n.Normalize("John-Brown@yahoo.com"))   // john@yahoo.com
 	fmt.Println(n.Normalize("t.e-St+@googlemail.com")) // te-st@gmail.com
 	fmt.Println(n.Normalize("t.e-St+@google.com"))     // te-st@gmail.com
 	
