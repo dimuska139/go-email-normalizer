@@ -7,7 +7,7 @@ import (
 
 func TestAppleUsername(t *testing.T) {
 	rule := AppleRule{}
-	assert.Equal(t, "t.est", rule.ProcessUsername("t+.est"))
+	assert.Equal(t, "johnbrown", rule.ProcessUsername("JohnBrown+test"))
 }
 
 func TestAppleDomain(t *testing.T) {
