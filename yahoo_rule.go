@@ -7,7 +7,14 @@ type YahooRule struct {
 }
 
 func (rule *YahooRule) ProcessUsername(username string) string {
-	return strings.ToLower(username)
+	result := strings.ToLower(username)
+
+	subaddressingIndex := strings.Index(result, "-")
+	if subaddressingIndex != -1 {
+		result = result[0:subaddressingIndex]
+	}
+
+	return result
 }
 
 func (rule *YahooRule) ProcessDomain(domain string) string {
