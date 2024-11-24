@@ -12,7 +12,7 @@ to prevent multiple signups. `go-email-normalizer` contains some popular provide
 ## Download
 
 ```shell
-go get -u github.com/dimuska139/go-email-normalizer/v3
+go get -u github.com/dimuska139/go-email-normalizer/v4
 ```
 
 ## Usage
