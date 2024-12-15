@@ -1,7 +1,7 @@
 # go-email-normalizer - email normalization for Go
 
-[![Build Status](https://travis-ci.org/dimuska139/go-email-normalizer.svg?branch=master)](https://travis-ci.org/dimuska139/go-email-normalizer)
-[![codecov](https://codecov.io/gh/dimuska139/go-email-normalizer/branch/master/graph/badge.svg)](https://codecov.io/gh/dimuska139/go-email-normalizer)
+[![Go Reference](https://pkg.go.dev/badge/github.com/dimuska139/go-email-normalizer.svg)](https://pkg.go.dev/github.com/dimuska139/tilda-go)
+[![codecov](https://codecov.io/github/dimuska139/go-email-normalizer/graph/badge.svg?token=E1TagDCBXc)](https://codecov.io/gh/dimuska139/go-email-normalizer)
 [![Go Report Card](https://goreportcard.com/badge/github.com/dimuska139/go-email-normalizer)](https://goreportcard.com/report/github.com/dimuska139/go-email-normalizer)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/dimuska139/go-email-normalizer/blob/master/LICENSE)
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  
