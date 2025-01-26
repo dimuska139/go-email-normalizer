@@ -8,7 +8,16 @@ type ProtonmailRule struct {
 
 func (rule *ProtonmailRule) ProcessUsername(username string) string {
 	result := strings.ToLower(username)
-	result = strings.Replace(result, ".", "", -1)
+
+	charsToReplace := []string{
+		".",
+		"_",
+		"-",
+	}
+
+	for _, char := range charsToReplace {
+		result = strings.Replace(result, char, "", -1)
+	}
 
 	plusSignIndex := strings.Index(result, "+")
 	if plusSignIndex != -1 {
